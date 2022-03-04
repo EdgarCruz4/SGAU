@@ -23,21 +23,21 @@
     <div>
         <div>
             <div>
-                <form>
+                <form method="POST" action="../Backen/Usu_insert.php">
                     <div>
-                        <input type="text" id="name" placeholder="Nombre" minlength="5" required>
+                        <input type="text" id="name" name="name" placeholder="Nombre" minlength="5" required>
                     </div>
                     <div>
-                        <input type="email" id="email" placeholder="Correo" required>
+                        <input type="email" id="email" name="email" placeholder="Correo" required>
                     </div>
                     <div>
-                        <input type="text" id="enrollment" placeholder="Matricula" minlength="7" required>
+                        <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" required>
                     </div>
                     <div>
-                        <input type="password" id="password" placeholder="Contraseña" minlength="6" required>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" minlength="6" required>
                     </div>
                     <div>
-                        <button id="send" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Registrarme </button>
+                        <button id="send" type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Registrarme </button>
                     </div>
                     <div>   
                         <a href="../index.php">Regresar a la pantalla de inicio</a></p>
@@ -51,7 +51,7 @@
 </body>
 </html>
 <script>
-    $('#send').click(function{
+    /*$('#send').click(function{
         var name=$('#name').val();
         var email=$('#email').val();
         var enrollment=$('#enrollment').val();
@@ -64,5 +64,5 @@
                 $('#warning').html(r);
             }
         });
-    });
+    });*/
 </script>
