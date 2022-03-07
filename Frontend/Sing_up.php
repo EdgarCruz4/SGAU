@@ -23,7 +23,7 @@
     <div>
         <div>
             <div>
-                <form method="POST" action="../Backen/Usu_insert.php">
+                <form method="POST" action="../Backend/Usu_insert.php">
                     <div>
                         <input type="text" id="name" name="name" placeholder="Nombre" minlength="5" required>
                     </div>
@@ -34,7 +34,10 @@
                         <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" required>
                     </div>
                     <div>
-                        <input type="password" id="password" name="password" placeholder="Contraseña" minlength="6" required>
+                        <input type="password" id="password1" name="password1" placeholder="Contraseña" minlength="6" required>
+                    </div>
+                    <div>
+                        <input type="password" id="password2" name="password2" placeholder="Ingresa nuevamente la contraseña" minlength="6" required>
                     </div>
                     <div>
                         <button id="send" type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Registrarme </button>
