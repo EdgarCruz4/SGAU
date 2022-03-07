@@ -12,15 +12,15 @@
 
         if($password1 == $password2)
         {
-                echo $C_name = filter_var($name, FILTER_SANITIZE_STRING).'<br>';
-                echo $C_email = filter_var($email, FILTER_SANITIZE_STRING).'<br>';
-                echo $C_enrollment = filter_var($enrollment, FILTER_SANITIZE_NUMBER_INT).'<br>';
-                echo $C_password = filter_var($password1, FILTER_SANITIZE_STRING).'<br>';
+                echo $C_name = filter_var($name, FILTER_SANITIZE_STRING);
+                echo $C_email = filter_var($email, FILTER_SANITIZE_STRING);
+                echo $C_enrollment = filter_var($enrollment, FILTER_SANITIZE_NUMBER_INT);
+                echo $C_password = filter_var($password1, FILTER_SANITIZE_STRING);
 
                 echo $hash = md5($C_password);
 
 
-                /*$query="SELECT * FROM usu_mst WHERE usu_mtrcl='$hash' AND usu_email='$C_email'";
+                $query="SELECT * FROM usu_mst WHERE usu_mtrcl='$hash' AND usu_email='$C_email'";
                 $result = mysqli_query($conexion, $query);
 
 
@@ -42,7 +42,7 @@
                 else {
                         //echo "<script>alert('Hay un error')</script>";
                         header("location:../Frontend/Sing_up.php");
-                }*/
+                }
         }
         else
         {       
