@@ -25,7 +25,7 @@
             <div>
                 <form method="POST" action="../Backend/Usu_insert.php">
                     <div>
-                        <input type="text" id="name" name="name" placeholder="Nombre" minlength="5" required>
+                        <input type="text" id="name" name="name" placeholder="Nombre completo" minlength="8" required>
                     </div>
                     <div>
                         <input type="email" id="email" name="email" placeholder="Correo" required>

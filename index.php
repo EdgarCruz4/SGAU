@@ -22,8 +22,8 @@
             <div>
                 <form action="" action="">
                     <div>
-                        <button class="btn btn-primary"><a href="Frontend/Sing_in_st.php">Alumnos</a></button>
-                        <button class="btn btn-success"><a href="Frontend/Sing_in_te.php">Docentes</a></button><br>
+                        <button class="btn btn-primary"><a href="Frontend/Sing_in_almn.php">Alumnos</a></button>
+                        <button class="btn btn-success"><a href="Frontend/Sing_in_prfsr.php">Docentes</a></button><br>
                         <p>¿No tienes cuenta? <a href="Frontend/Sing_Up.php">Registrate aqui</a></p>
                     </div>
                 </form>
