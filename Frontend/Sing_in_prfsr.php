@@ -21,7 +21,7 @@
     <div>
         <div>
             <div>
-                <form action="">
+                <form method="POST" action="">
                     <div>
                         <input type="text" placeholder="NFC">
                     </div>
@@ -29,7 +29,7 @@
                         <input type="text" placeholder="Contraseña">
                     </div>
                     <div>
-                        <button class="btn btn-primary">Ingresar</button>
+                        <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
                     </div>
                     <div>
                         <a href="../index.php">Regresar a la pantalla de inicio</a></p>
