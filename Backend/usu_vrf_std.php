@@ -10,16 +10,18 @@
     $c_password = filter_var($password, FILTER_SANITIZE_STRING);
     $c_enrollment = filter_var($enrollment, FILTER_SANITIZE_NUMBER_INT).'<br>';
     //Crate of hash
-    $hash = md5($c_enrollment);
+    $hash = md5($c_enrollment).'<br>';
 
     $query="SELECT * FROM usu_mst WHERE usu_mtrcl = '$c_enrollment' AND usu_cnt = '$hash'";
     $result = mysqli_query($conexion, $query);
 
-    if(!$result->num_rows > 0){
-        echo "se no encontro resultado";
+    if($query == 0){
+        //result found
+        header("location:../Frontend/Sing_in_almn.php");
     }
-    else{
-        echo "se encontro resultado";
+    else {
+        //No result found 
+        header("location:../Frontend/menu.php");
     }
     
 ?>

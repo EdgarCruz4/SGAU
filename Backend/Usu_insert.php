@@ -18,7 +18,7 @@
                 $C_enrollment = filter_var($enrollment, FILTER_SANITIZE_NUMBER_INT);
                 $C_password = filter_var($password1, FILTER_SANITIZE_STRING);
                 //Create of hash
-                echo $hash = md5($C_password);
+                $hash = md5($C_password);
 
 
                 $query="SELECT * FROM usu_mst WHERE usu_mtrcl='$C_enrollment' AND usu_email='$C_email'";

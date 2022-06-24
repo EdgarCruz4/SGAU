@@ -17,7 +17,7 @@
 
     <!--Css personalizado-->
     <link rel="stylesheet" href="css/start_window.css">
-    <title>Inscribirse</title>
+    <title>Registro</title>
 </head>
 <body>
     <div>

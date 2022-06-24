@@ -15,7 +15,7 @@
     <!--Css personalizado-->
     <link rel="stylesheet" href="css/start_window.css">
 
-    <title>Registrarse</title>
+    <title>Inicio de sesión profesores</title>
 </head>
 <body>
     <div>

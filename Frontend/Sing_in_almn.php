@@ -15,7 +15,7 @@
     <!--Css personalizado-->
     <link rel="stylesheet" href="css/start_window.css">
 
-    <title>Registrarse</title>
+    <title>Inicio de sesión</title>
 </head>
 <body>
     <div>
@@ -26,7 +26,7 @@
                         <input type="text" placeholder="Matricula" name="enrollment">
                     </div>
                     <div>
-                        <input type="text" placeholder="Contraseña" name="password">
+                        <input type="password" placeholder="Contraseña" name="password">
                     </div>
                     <div>
                         <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
