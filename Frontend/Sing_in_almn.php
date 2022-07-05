@@ -23,10 +23,10 @@
             <div>
                 <form method="POST" action="../Backend/usu_vrf_std.php">
                     <div>
-                        <input type="text" placeholder="Matricula" name="enrollment">
+                        <input type="text" placeholder="Matricula" name="enrollment" required>
                     </div>
                     <div>
-                        <input type="password" placeholder="Contraseña" name="password">
+                        <input type="password" placeholder="Contraseña" name="password" required>
                     </div>
                     <div>
                         <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>

@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Calendario Escolar</title>
 </head>
 <body>
+    <!--Start side menu-->
     <nav id="sidebar">
         <?php 
             include 'menu.php';
         ?>
     </nav>
+    <!--End of side menu-->
+
+    <main>
+    <main>
 </body>
 </html>

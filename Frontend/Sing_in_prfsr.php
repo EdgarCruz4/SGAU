@@ -23,10 +23,10 @@
             <div>
                 <form method="POST" action="">
                     <div>
-                        <input type="text" placeholder="NFC">
+                        <input type="text" placeholder="NFC" minlength="13" required>
                     </div>
                     <div>
-                        <input type="text" placeholder="Contraseña">
+                        <input type="text" placeholder="Contraseña" required>
                     </div>
                     <div>
                         <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
