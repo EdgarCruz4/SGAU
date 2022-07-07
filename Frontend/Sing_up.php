@@ -23,7 +23,7 @@
     <div>
         <div>
             <div>
-                <form method="POST" action="../Backend/Usu_insert.php">
+                <form method="POST" action="../Backend/usu_almn_insert.php">
                     <div>
                         <input type="text" id="name" name="name" placeholder="Nombre completo" minlength="8" required>
                     </div>

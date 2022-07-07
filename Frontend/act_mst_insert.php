@@ -31,7 +31,7 @@
 
     <main>
         <div class="col">
-            <form method="POST" action="../Backend/act_mst_insert.php">
+            <form novalidate method="POST" enctype="multipart/form-data" action="../Backend/act_mst_insert.php">
 
                 <div class="row">
                     <div class="col-sm-1"></div>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="col">
                         <label>Imagen ilustrativa</label>
-                        <input type="file" name="act_img" class="form-control-file" required>
+                        <input type="file" name="act_img" class="form-control-file" accept="image/*" required>
                     </div>
                     <div class="col-sm-1"></div>
                 </div>

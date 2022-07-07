@@ -51,5 +51,5 @@
     <!--End of side menu-->
 
 </body>
-    <script src="../Backend/scripts/menu.js"></script>
+    <script src="../Backend/js/menu.js"></script>
 </html>
