@@ -1,6 +1,6 @@
 <?php
-    include "Connection.php";
-    include "Post.php";
+    include "connection.php";
+    include "post.php";
     error_reporting(0);
     session_start();
 
@@ -10,7 +10,7 @@
     $c_password = filter_var($password, FILTER_SANITIZE_STRING);
     $c_enrollment = filter_var($enrollment, FILTER_SANITIZE_NUMBER_INT).'<br>';
     //Crate of hash
-    $hash = md5($c_enrollment).'<br>';
+    $hash = md5($c_enrollment);
 
     $query="SELECT * FROM usu_mst WHERE usu_mtrcl = '$c_enrollment' AND usu_cnt = '$hash'";
     $result = mysqli_query($conexion, $query);
@@ -21,7 +21,7 @@
     }
     else {
         //No result found 
-        header("location:../Frontend/menu.php");
+        header("location:../Frontend/act_mst_std.php");
     }
     
 ?>
