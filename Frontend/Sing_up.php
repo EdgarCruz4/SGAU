@@ -1,3 +1,9 @@
+<?php
+    require '../Backend/scripts/crrera_mst.php';
+    $crrera_mst = new crrera_mst();
+
+    $route = '../';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +26,9 @@
     <title>Registro</title>
 </head>
 <body>
+    <?php 
+        $result_crrera = $crrera_mst->get_crrera($route);
+    ?>
     <div>
         <div>
             <div>
@@ -32,6 +41,18 @@
                     </div>
                     <div>
                         <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" required>
+                    </div>
+                    <div>
+                        <select name="student_career" id="student_career" required>
+                            <option value="" select hidden> Selecciona tu carrera</option>
+                            <?php
+                                while($crrera = $result_crrera->fetch_assoc()){
+                                    ?>
+                                        <option value="<?php echo $crrera['crrera_id'];?>"><?php echo $crrera['crrera_dscrip'];?></option>
+                                    <?php
+                                }
+                            ?>
+                        </select>
                     </div>
                     <div>
                         <input type="password" id="password1" name="password1" placeholder="Contraseña" minlength="6" required>

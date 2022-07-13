@@ -21,12 +21,12 @@
     <div>
         <div>
             <div>
-                <form method="POST" action="">
+                <form method="POST" action="../Backend/usu_vrf_dcnt.php">
                     <div>
-                        <input type="text" placeholder="NFC" minlength="13" required>
+                        <input type="text" name="nfc" placeholder="NFC" minlength="13" required>
                     </div>
                     <div>
-                        <input type="text" placeholder="Contraseña" required>
+                        <input type="password" name="password" placeholder="Contraseña" required>
                     </div>
                     <div>
                         <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $user_name = $_SESSION['user_name'];
+    if(!isset($user_name)){
+        header("location: ../index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,10 +46,16 @@
                     </div>
                 </a>
 
-                <a href="act_mst.php">
+                <a href="act_mst.php" class="selected">
                     <div class="option">
                         <i class="fa-solid fa-calendar-check"></i>
                         <h7>Eventos Universitarios</h7>
+                    </div>
+                </a>
+                <a href="../Backend/scripts/exit.php" class="selected">
+                    <div class="option">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <h7>Exit</h7>
                     </div>
                 </a>
             </div>
