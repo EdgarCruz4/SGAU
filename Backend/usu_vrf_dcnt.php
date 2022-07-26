@@ -18,6 +18,7 @@
     $user = $result->fetch_assoc();
     $user_name = $user['dcnt_nom'];
     $user_crrera = $user['dcnt_crrera_id'];
+    $user_nfc = $user['dcnt_nfc'];
         
     if(!$result->num_rows > 0){
         //result found
@@ -27,6 +28,7 @@
         //No result found 
         $_SESSION['user_name'] = $user_name;
         $_SESSION['user_crrera'] = $user_crrera;
+        $_SESSION['user_crdncial'] = $user_nfc;
         header("location:../Frontend/act_mst.php");
     }
     

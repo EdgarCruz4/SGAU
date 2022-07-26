@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap4/css/bootstrap.min.css">
+    <script src="css/bootstrap4/js/bootstrap.min.js"></script>
     
     <!-- Los iconos tipo Solid de Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     
     <!--Css personalizado-->
-    <link rel="stylesheet" href="css/start_window.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Inicio de sesión profesores</title>
 </head>
@@ -23,7 +23,7 @@
             <div>
                 <form method="POST" action="../Backend/usu_vrf_dcnt.php">
                     <div>
-                        <input type="text" name="nfc" placeholder="NFC" minlength="13" required>
+                        <input type="text" name="nfc" placeholder="NFC" minlength="13" maxlength="13" required>
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Contraseña" required>

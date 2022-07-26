@@ -4,6 +4,7 @@
     error_reporting(0);
     session_start();
 
+    $usu_crrera_id = $_SESSION['user_crrera'];
     $act_titulo = $_POST['act_titulo'];
     $act_finicio = $_POST['act_finicio'];
     $act_ffin = $_POST['act_ffin'];
@@ -19,9 +20,7 @@
     $max_kb = 200;
 
     //Information sanitize
-    $C_act_titulo = filter_var($act_titulo, FILTER_SANITIZE_STRING);    
-    $C_act_finicio = filter_var($act_finicio, FILTER_SANITIZE_NUMBER_INT);
-    $C_act_ffin = filter_var($act_ffin, FILTER_SANITIZE_NUMBER_INT);
+    $C_act_titulo = filter_var($act_titulo, FILTER_SANITIZE_STRING);
     $C_act_dscrp = filter_var($act_dscrp, FILTER_SANITIZE_STRING);
     $C_act_url = filter_var($act_url, FILTER_SANITIZE_URL);
 
@@ -32,10 +31,15 @@
     }
     else{
         if(in_array($_FILES["act_img"]["type"], $format_img) && $_FILES["act_img"]["size"]<= ($max_kb * 1024)){
-            if(move_uploaded_file($tmp_img, $add)){
-                //Save the information in the DB
-                $query="INSERT INTO `act_mst` (`act_titulo`, `act_finicio`, `act_ffin`, `act_dscrp`, `act_url`, `act_img`, `act_dcnt_id`) 
-                VALUES ('$C_act_titulo', '$C_act_finicio', '$C_act_ffin', '$C_act_dscrp', '$C_act_url', '$name_img', '1');";
+            if(!file_exists($add)){
+                if(move_uploaded_file($tmp_img, $add)){
+                    //Save the information in the DB
+                    $query="INSERT INTO `act_mst` (`act_titulo`, `act_finicio`, `act_ffin`, `act_dscrp`, `act_url`, `act_img`, `act_dcnt_id`) 
+                    VALUES ('$C_act_titulo', '$act_finicio', '$act_ffin', '$C_act_dscrp', '$C_act_url', '$name_img', '$usu_crrera_id');";
+                }
+            }else{
+                //echo "archivo ya existente";
+                header("location:../Frontend/act_mst_insert.php");
             }
         }
         else{
