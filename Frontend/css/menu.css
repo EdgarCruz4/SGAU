@@ -116,7 +116,7 @@ header{
     cursor: pointer;
 }
 
-.options__menu .option h4{
+.options__menu .option span{
     font-weight: 300;
     cursor: pointer;
 }
@@ -125,6 +125,10 @@ a.selected{
     color: #fff;
     text-decoration: none;
 }
+/*a.user{
+    color: #fff;
+    text-decoration: none;
+}*/
 
 .selected:before{
     content: '';
@@ -136,6 +140,29 @@ a.selected{
     left: -30px;
 }
 
+.exit{
+    bottom: 5%;
+    position: absolute;
+    width: 100%;
+}
+
+.select__exit{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.exit .select__exit span{
+    font-weight: 300;
+    cursor: pointer;
+    font-weight: normal;
+}
+.exit .select__exit i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
 /*Clases para usar en JavaScript*/
 
 .body_move{

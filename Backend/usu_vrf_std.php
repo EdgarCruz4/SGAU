@@ -18,6 +18,7 @@
     $user = $result->fetch_assoc();
     $user_name = $user['usu_nom'];
     $user_crrera = $user['usu_crrera_id'];
+    $user_mtrcl = $user['usu_mtrcl'];
         
     if(!$result->num_rows > 0){
         //result found
@@ -27,6 +28,7 @@
         //No result found 
         $_SESSION['user_name'] = $user_name;
         $_SESSION['user_crrera'] = $user_crrera;
+        $_SESSION['user_crdncial'] = $user_mtrcl;
         header("location:../Frontend/act_mst_std.php");
     }
     
