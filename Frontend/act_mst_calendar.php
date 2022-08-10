@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Calendario Escolar</title>
 </head>
 <body>
@@ -81,7 +81,7 @@
                     <input type="hidden" name="img_name" value="<?php echo $img['img_name'];?>">
                     <button type="submit" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
                 </form>
-                <div class="text-center">
+                <div class="modal-container">
                     <img src="multimedia/calendario/<?php echo $img['img_name'];?>" class="img-fluid" alt="Responsive image">
                 </div>
             <?php
@@ -92,9 +92,4 @@
     </div>
 
 </body>
-<script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    })
-</script>
 </html>

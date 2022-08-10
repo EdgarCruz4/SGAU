@@ -5,26 +5,30 @@
     session_start();
     
     $act_id = $_POST['act_id'];
-    
-    
-    $query = "DELETE FROM `act_mst` WHERE `act_id` = '$act_id'";
+
+    $query = "SELECT * FROM act_mst WHERE act_id = '$act_id'";
     $result = mysqli_query($conexion,$query);
 
     if(isset($result)){
-
         //remove image from folder
-        $query2 = "SELECT * FROM act_mst WHERE act_id = '$act_id'";
-        $reuslt2 = mysqli_query($conexion,$query2);
-        $act = $reuslt2->fetch_assoc();
+        $act = $result->fetch_assoc();
 
         $ruta_save = '../Frontend/multimedia/';
         $name_img = $act['act_img'];
-        $add = $ruta_save.$name_img;
-        unlink($add);
+        echo $add = $ruta_save.$name_img;
 
-        header("location:../Frontend/act_mst.php");
+        echo $query2 = "DELETE FROM `act_mst` WHERE `act_id` = '$act_id'";
+        echo $result2 = mysqli_query($conexion,$query2);
 
+        if(isset($result2)){
+            unlink($add);
+            header("location:../Frontend/act_mst.php");
+        }else{
+            header("location:../Frontend/act_mst.php");
+            //echo "mal"
+        }
     }else{
         header("location:../Frontend/act_mst.php");
+        //echo 'mal2';
     }
 ?>

@@ -42,18 +42,19 @@
             while($act = $result_act->fetch_assoc()){
                 $finicio = date_create($act['act_finicio']);
                 $ffin = date_create($act['act_ffin']);
+                $act_id = $act['act_id'];
         ?>
             <div class="col-xs mt-3">
                 <div class="col-2">
-                    <div class="card" style="width: 18rem; height: 591.58px;" >
+                    <div class="card shadow" style="width: 18rem; height: 616px;" >
                         <img class="rounded" src="multimedia/<?php echo $act['act_img'];?>" style="height: 190.58px">
-                        <div class="card-body" style="height:124.42px;">
+                        <div class="card-body" style="height:148px;">
                             <h5 class="card-title"><b><?php echo $act['act_titulo'];?></b></h5>
-                            <p class="card-text"><?php echo $act['act_dscrp'].'...';;?></p>
+                            <p class="card-text"><?php echo $act['act_dscrp_breve'];?></p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Fecha de inicio: <br/> <?php echo date_format($finicio, "Y/m/d g:i A");?></li>
-                            <li class="list-group-item">Fecha de finlización: <br/> <?php echo date_format($ffin, "Y/m/d g:i A");?></li>
+                            <li class="list-group-item"><b>Fecha de inicio:</b> <br/> <?php echo date_format($finicio, "Y/m/d g:i A");?></li>
+                            <li class="list-group-item"><b>Fecha de finlización:</b> <br/> <?php echo date_format($ffin, "Y/m/d g:i A");?></li>
                             <?php 
                                 if($act['act_url'] != null){
                             ?>
@@ -68,7 +69,18 @@
                             ?>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="btn btn-primary"><i class="fa-solid fa-eye"></i> Ver</a>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreInformation" onclick="buttonModal('<?php echo $act_id;?>')"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver</button>
+                            <!-- Modal -->
+                            <div id="modal">
+                            <div class="modal fade" id="moreInformation" tabindex="-1" role="dialog" aria-labelledby="moreInformation" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content" id="modalContent">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,4 +92,5 @@
     </div>
     <!--End of contento-->
 </body>
+    <script src="../Backend/js/modalCard.js"></script>
 </html>

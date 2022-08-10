@@ -44,14 +44,15 @@
             while($act = $result_act->fetch_assoc()){
                 $finicio = date_create($act['act_finicio']);
                 $ffin = date_create($act['act_ffin']);
+                $act_id = $act['act_id'];
         ?>
             <div class="col-xs mt-3">
                 <div class="col-2">
-                    <div class="card" style="width: 18rem; height: 591.58px;" >
+                    <div class="card shadow" style="width: 18rem; height: 616px;" >
                         <img class="rounded" src="multimedia/<?php echo $act['act_img'];?>" style="height: 190.58px">
-                        <div class="card-body" style="height:124.42px;">
+                        <div class="card-body" style="height:148px;">
                             <h5 class="card-title"><b><?php echo $act['act_titulo'];?></b></h5>
-                            <p class="card-text"><?php echo $act['act_dscrp'].'...';?></p>
+                            <p class="card-text"><?php echo $act['act_dscrp_breve'];?></p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Fecha de inicio: <br/> <?php echo date_format($finicio, "Y/m/d g:i A");?></li>
@@ -71,15 +72,28 @@
                         </ul>
                         <div class="card-body">
                             <div class="float-left">
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#moreInformation" onclick="buttonModal('<?php echo $act_id;?>')"><i class="fa-solid fa-eye"></i></button>
+                                <!-- Modal -->
+                                <div id="modal">
+                                <div class="modal fade" id="moreInformation" tabindex="-1" role="dialog" aria-labelledby="moreInformation" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content" id="modalContent">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="float-left ml-1">
                                 <form method="POST" action="act_mst_edit.php">
                                     <input type="hidden" name="act_id" value="<?php echo $act['act_id'];?>">
-                                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
                                 </form>
                             </div>
                             <div class="float-left ml-1">
                                 <form method="POST" action="../Backend/act_mst_delet.php">
                                     <input type="hidden" name="act_id" value="<?php echo $act['act_id'];?>">
-                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -93,4 +107,5 @@
     </div>
     <!--End of contento-->
 </body>
+    <script src="../Backend/js/modalCard.js"></script>
 </html>
