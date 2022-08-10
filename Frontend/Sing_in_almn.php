@@ -29,8 +29,8 @@
     <form action="../Backend/usu_vrf_std.php" class="login__form" method="POST">
 
       <div>
-        <label for="text">Matricula</label>
-        <input type="text" id="matricula" name="enrollment" placeholder="Matricula" minlength="7" maxlength="7" required>
+        <label for="text">Matrícula</label>
+        <input type="text" id="matricula" name="enrollment" placeholder="Matrícula" minlength="7" maxlength="7" required>
       </div>
 
       <div>
