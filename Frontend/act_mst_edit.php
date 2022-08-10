@@ -38,57 +38,70 @@
 
     <main>
         <div class="col">
-            <form novalidate method="POST" enctype="multipart/form-data" action="../Backend/act_mst_edit.php">
-                <?php
-                    $result_act = $act_mst->get_act_edit($act_id,$route);
-                    $act = $result_act->fetch_assoc();
-                ?>
-                <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col">
-                        <label>Titulo</label>
-                        <input type="text" name="act_titulo" class="form-control" value="<?php echo $act['act_titulo'];?>" placeholder="Titulo de la actividad a registrar" disabled>
-                        <input type="hidden" name="act_id" value="<?php echo $act['act_id'];?>">
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Inicio de Act.</label>
-                        <input type="datetime-local" name="act_finicio" class="form-control" value="<?php echo $act['act_finicio'];?>" required>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Fin de Act.</label>
-                        <input type="datetime-local" name="act_ffin" class="form-control" value="<?php echo $act['act_ffin'];?>" required>
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-                <br>
-
-                <div class="form-row">
-                    <div class="col-sm-1"></div>
-                    <div class="col">
-                        <label>Descripción</label>
-                        <textarea class="form-control" name="act_dscrp" rows="3" placeholder="Descripción de la actividad"><?php echo $act['act_dscrp'];?></textarea>
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-6">
-                        <label>URL</label>
-                        <input type="text" name="act_url" class="form-control" value="<?php echo $act['act_url'];?>"  placeholder="Agregar una URL solo si es necesario">
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-sm-1"></div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+            <form method="POST" enctype="multipart/form-data" action="../Backend/act_mst_edit.php">
+                <class class="form-group">
+                    <?php
+                        $result_act = $act_mst->get_act_edit($act_id,$route);
+                        $act = $result_act->fetch_assoc();
+                    ?>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col mt-4">
+                            <label>Titulo</label>
+                            <input type="text" name="act_titulo" class="form-control" value="<?php echo $act['act_titulo'];?>" placeholder="Titulo de la actividad a registrar" disabled>
+                            <input type="hidden" name="act_id" value="<?php echo $act['act_id'];?>">
                         </div>
-                    <div class="col-sm-1"></div>
-                </div>
+                        <div class="col-sm-3 mt-4">
+                            <label>Inicio de Act.</label>
+                            <input type="datetime-local" name="act_finicio" class="form-control" value="<?php echo $act['act_finicio'];?>" required>
+                        </div>
+                        <div class="col-sm-3 mt-4">
+                            <label>Fin de Act.</label>
+                            <input type="datetime-local" name="act_ffin" class="form-control" value="<?php echo $act['act_ffin'];?>" required>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-6 mt-4">
+                            <label>Descripción resumida</label>
+                            <input type="text" name="act_dscrp_breve" class="form-control" value="<?php echo $act['act_dscrp_breve'];?>" placeholder="Descripción resumida del evento o actividad" maxlength="60" required>
+                        </div>
+                        <div class="col mt-4">
+                            <label>Correo</label>
+                            <input type="text" name="act_email" class="form-control" value="<?php echo $act['act_email'];?>" placeholder="Para mas informes (solo si es necesario)">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm-1"></div>
+                        <div class="col mt-4">
+                            <label>Descripción detallada</label>
+                            <textarea class="form-control" name="act_dscrp" rows="3" placeholder="Descripción de la actividad"><?php echo $act['act_dscrp'];?></textarea>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-6 mt-4">
+                            <label>URL</label>
+                            <input type="text" name="act_url" class="form-control" value="<?php echo $act['act_url'];?>"  placeholder="Agregar una URL solo si es necesario">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+                            </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </class>
             </form>
         </div>
     </main>  
