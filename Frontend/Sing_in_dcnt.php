@@ -22,8 +22,8 @@
 
     <header class="login__header">
       <h2><svg class="icon">
-          <use xlink:href="#icon-lock" />
-        </svg>Inicio de sesión</h2>
+        <use xlink:href="#icon-lock" />
+      </svg>Inicio de sesión</h2>
     </header>
     
     <form form method="POST"  class="login__form" action="../Backend/usu_vrf_dcnt.php">
@@ -39,11 +39,11 @@
       </div>
 
       <div>
-      <input class="button" type="submit" value="Ingresar">
+        <input class="button" type="submit" value="Ingresar">
       </div>
-    <div>
-    <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
-    </div>
+      <div>
+        <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
+      </div>
     </form>
 
   </div>

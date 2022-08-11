@@ -4,7 +4,7 @@
     error_reporting(0);
     session_start();
 
-    $nfc = $_POST['nfc'];
+    $nfc = $_POST['enrollment'];
     echo $password = $_POST['password'];
     //Information sanitize
     $c_password = filter_var($password, FILTER_SANITIZE_STRING);

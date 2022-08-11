@@ -31,7 +31,7 @@
     }
     $result = mysqli_query($conexion, $query);
     if(isset($result)){
-        header("location:../Frontend/act_mst_calendar_std.php");
+        header("location:../Frontend/act_mst_calendar.php");
     }  
     else{
         echo "<spant>No hay imagen para mostrar</spant>";

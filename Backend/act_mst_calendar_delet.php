@@ -16,7 +16,7 @@
         $add = $ruta_save.$img_name;
         unlink($add);
 
-        header("location:../Frontend/act_mst_calendar_std.php");
+        header("location:../Frontend/act_mst_calendar.php");
 
     }else{
         echo "error";
