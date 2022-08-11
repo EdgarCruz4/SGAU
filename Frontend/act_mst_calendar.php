@@ -34,7 +34,7 @@
                     <?php
                         if($result_img->num_rows == 0){
                     ?>
-                    <a href="act_mst_insert.php" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-plus"></i></a>
+                        <a href="act_mst_insert.php" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-plus"></i></a>
                     <?php
                         }
                     ?>
@@ -81,7 +81,7 @@
                     <input type="hidden" name="img_name" value="<?php echo $img['img_name'];?>">
                     <button type="submit" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
                 </form>
-                <div class="modal-container">
+                <div class="text-center">
                     <img src="multimedia/calendario/<?php echo $img['img_name'];?>" class="img-fluid" alt="Responsive image">
                 </div>
             <?php

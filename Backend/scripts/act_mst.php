@@ -7,10 +7,9 @@
             $result = $conexion->query($query);
             return $result;
         }
-        /*Revisar funcion es posible que se pueda eliminar */
-        public function get_act_career($route,$usu_crrera_id){
+        public function get_act_career($route,$user_crdncial){
             require $route.'Backend/connection.php';
-            $query = "SELECT * FROM act_mst WHERE act_crrera_id = '$usu_crrera_id' AND act_crrera_id = '7';";
+            $query = "SELECT * FROM act_mst, dcnt_mst WHERE dcnt_nfc = '$user_crdncial' AND act_dcnt_id = dcnt_id ORDER BY act_finicio;";
             $result = $conexion->query($query);
             return $result;
         }

@@ -42,7 +42,7 @@
       <input class="button" type="submit" value="Ingresar">
       </div>
     <div>
-    <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
+      <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
     </div>
     </form>
 

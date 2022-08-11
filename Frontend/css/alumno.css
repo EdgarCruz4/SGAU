@@ -23,6 +23,14 @@
   h2 {
     font-size: 1.75rem;
   }
+
+  a.return{
+    text-decoration: none;
+    color: #292929;
+  }
+  a:hover{
+    color: #28ad63;
+  }
   
   input {
     background-image: none;

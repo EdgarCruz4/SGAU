@@ -1,6 +1,6 @@
 <?php
-    require '../Backend/scripts/act_mst.php';
-    $act_mst = new act_mst();
+    require '../Backend/scripts/crrera_mst.php';
+    $act_mst = new crrera_mst();
 
     $route = '../';
 ?>
@@ -18,6 +18,7 @@
         <?php 
             include_once 'menu.php';
             $user_name = $_SESSION['user_name'];
+            $crrera_id = $_SESSION['user_crrera'];
         ?>
     </nav>
     <!--End of side menu-->
@@ -28,7 +29,7 @@
         <div class="row">
             <div class="col">
                 <span align="center">
-                    <h2 class="font-weight-bold">Eventos Culturales y Universitarias</h2>
+                    <h2 class="font-weight-bold">Eventos Culturales, Deportivos y Universitarios</h2>
                 </span>
             </div>
         </div>
@@ -38,7 +39,7 @@
     <div class="container-xl">
         <div class="row align-items-center">
         <?php
-            $result_act = $act_mst->get_act($route);
+            $result_act = $act_mst->get_crrera_std($route, $crrera_id);
             while($act = $result_act->fetch_assoc()){
                 $finicio = date_create($act['act_finicio']);
                 $ffin = date_create($act['act_ffin']);

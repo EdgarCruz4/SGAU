@@ -17,6 +17,7 @@
     <nav id="sidebar">
         <?php 
             include_once 'menu.php';
+            $user_crdncial = $_SESSION['user_crdncial'];
         ?>
     </nav>
     <!--End of side menu-->
@@ -27,7 +28,7 @@
         <div class="row">
             <div class="col">
                 <span align="center">
-                    <h2 class="font-weight-bold">Eventos Culturales y Universitarias</h2>
+                    <h2 class="font-weight-bold">Eventos Culturales, Deportivos y Universitarios</h2>
                 </span>
                 <span class="float-right">
                     <a href="act_mst_insert.php" class="btn btn-success btn-lg"><i class="fa-solid fa-plus"></i></a>
@@ -40,7 +41,7 @@
     <div class="container-xl">
         <div class="row align-items-center">
         <?php
-            $result_act = $act_mst->get_act($route);
+            $result_act = $act_mst->get_act_career($route,$user_crdncial);
             while($act = $result_act->fetch_assoc()){
                 $finicio = date_create($act['act_finicio']);
                 $ffin = date_create($act['act_ffin']);
