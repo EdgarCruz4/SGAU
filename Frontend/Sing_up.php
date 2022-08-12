@@ -22,17 +22,19 @@
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <!--Css personalizado-->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sing_up.css">
     <title>Registro</title>
 </head>
-<body>
+<body class="align">
+<div class="login">
     <?php 
         /*$result_crrera = $crrera_mst->get_crrera($route);*/
     ?>
-    <div>
-        <div>
-            <div>
-                <form method="POST" action="../Backend/usu_almn_insert.php">
+    <header class="login__header">
+      <h2>Registro de usuario</h2>
+    </header>
+
+                <form class="login__form" method="POST" action="../Backend/usu_almn_insert.php">
                     <div>
                         <input type="text" id="name" name="name" placeholder="Nombre completo" minlength="8" required>
                     </div>
@@ -71,10 +73,10 @@
                     </div>
                 </form>
                 <div id="warning">
-                </div>
-            </div>
-        </div>
+
+
     </div>
+</div>
 </body>
 </html>
 <script>
