@@ -1,3 +1,11 @@
+body {
+    background-color: #c0c0c0;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    min-block-size: 100vh;
+    padding: 5vmin;
+  }
 a{
     text-decoration: none;
     color: black;  
@@ -10,10 +18,25 @@ h1{
     text-align: center;
 }
 .formulario_content{
-    margin-left: 15%;
+    margin-left: 20%;
     border: 6px solid #70B85D;
-    width: 70%;
+    background-color: #ffffff;
+    width: 60%;
     border-radius: 3%;
+}
+
+.col { 
+    display:flex; 
+    justify-content: center;
+}
+
+.flex-box { 
+    display:flex; 
+    justify-content:space-between; 
+}
+
+.text{
+    text-align: center;
 }
 
 .formulario{

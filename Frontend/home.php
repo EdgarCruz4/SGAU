@@ -14,6 +14,7 @@
 
     <!--Css personalizado-->
     <link rel="stylesheet" href="Frontend/css/index.css">
+
     <title>Inicio de sesión</title>
 </head>
 <body>
@@ -23,11 +24,8 @@
                 <main>
                     <div class="row">
                         <div class="col">
-                            <span class="float-center"><h1>Pantallas de usuario</h1></span>
+                            <h1>Pantallas de usuarios</h1>
                         </div>
-                        <!--<div class="col">
-                        <span class="float-right"><button type="button" class="btn btn-danger" style="float-right"> < Regresar</button></span>
-                        </div>-->
                     </div>
                 </main>
                 <br><br>
@@ -62,9 +60,15 @@
                                 <span class="visually-hidden">Siguiente</span>
                             </button>
                             </div>
-                            <button class="btn btn-primary"><a href="Frontend/Sing_in_almn.php">Alumnos</a></button>
-                            <button class="btn btn-success"><a href="Frontend/Sing_in_dcnt.php">Docentes</a></button><br>
+                            <div class="text">
+                                <p>Bienvenido al sistema Gestor de Actividades Universitaraias, para poder comenzar selecciona el tipo de usuario </p><br>
+                            </div>
+                            <div class="buttons">
+                            <button  class="btn btn-success" style="margin-left: 12.5%; width:25% "><a href="Frontend/Sing_in_almn.php">Alumnos</a></button> 
+                            <button  class="btn btn-primary" style="margin-left: 22.5%; width:25% "><a href="Frontend/Sing_in_dcnt.php">Docentes</a></button><br><br>
+                            </div>
                             <p>¿No tienes cuenta? <a href="Frontend/Sing_Up.php">Registrate aqui</a></p>
+                            
                         </div>
                     </form>
                 </div>
