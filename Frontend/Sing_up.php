@@ -1,8 +1,8 @@
 <?php
-    require '../Backend/scripts/crrera_mst.php';
+    /*require '../Backend/scripts/crrera_mst.php';
     $crrera_mst = new crrera_mst();
 
-    $route = '../';
+    $route = '../';*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +22,19 @@
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <!--Css personalizado-->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sing_up.css">
     <title>Registro</title>
 </head>
-<body>
+<body class="align">
+<div class="login">
     <?php 
-        $result_crrera = $crrera_mst->get_crrera($route);
+        /*$result_crrera = $crrera_mst->get_crrera($route);*/
     ?>
-    <div>
-        <div>
-            <div>
-                <form method="POST" action="../Backend/usu_almn_insert.php">
+    <header class="login__header">
+      <h2>Registro de usuario</h2>
+    </header>
+
+                <form class="login__form" method="POST" action="../Backend/usu_almn_insert.php">
                     <div>
                         <input type="text" id="name" name="name" placeholder="Nombre completo" minlength="8" required>
                     </div>
@@ -43,14 +45,17 @@
                         <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" maxlength="7" required>
                     </div>
                     <div>
-                        <select name="student_career" id="student_career" required>
+                    <select name="student_career" id="student_career" required >
                             <option value="" select hidden> Selecciona tu carrera</option>
+                            <option value="1">Tecnologias de la información</option>
+                            <option value="2">Gastronomia</option>
+                            <option value="3">Mecatronica</option>
                             <?php
-                                while($crrera = $result_crrera->fetch_assoc()){
+                               /* while($crrera = $result_crrera->fetch_assoc()){
                                     ?>
                                         <option value="<?php echo $crrera['crrera_id'];?>"><?php echo $crrera['crrera_dscrip'];?></option>
                                     <?php
-                                }
+                                }*/
                             ?>
                         </select>
                     </div>
@@ -68,10 +73,10 @@
                     </div>
                 </form>
                 <div id="warning">
-                </div>
-            </div>
-        </div>
+
+
     </div>
+</div>
 </body>
 </html>
 <script>
