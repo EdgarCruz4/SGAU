@@ -101,3 +101,10 @@
     border-color: #6ff37A;
     background-color: #6ff37A;
   }
+
+  #student_career{
+    background-color: #eee;
+    color: #676767;
+    padding: 0.25em 0.625em;
+    width: 100%;
+  }

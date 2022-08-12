@@ -45,7 +45,7 @@
                         <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" maxlength="7" required>
                     </div>
                     <div>
-                        <select name="student_career" id="student_career" required>
+                    <select name="student_career" id="student_career" required >
                             <option value="" select hidden> Selecciona tu carrera</option>
                             <option value="1">Tecnologias de la información</option>
                             <option value="2">Gastronomia</option>
