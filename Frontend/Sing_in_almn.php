@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
     <link rel="stylesheet" href="css/bootstrap4/css/bootstrap.min.css">
     <script src="css/bootstrap4/js/bootstrap.min.js"></script>
@@ -18,7 +21,7 @@
     <title>Inicio de sesión</title>
 </head>
 <body class="align">
-<div class="login">
+  <div class="login">
 
     <header class="login__header">
       <h2><svg class="icon">
@@ -39,11 +42,14 @@
       </div>
 
       <div>
-      <input class="button" type="submit" value="Ingresar">
+        <input class="button" type="submit" value="Ingresar">
       </div>
-    <div>
-      <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
-    </div>
+      <div>
+        <a class="return" href="../index.php">Regresar a la pantalla de inicio</a>
+      </div>
+      <div>
+        No tienes cuenta? <a class="return" href="Frontend/Sing_Up.php">Registrate aqui</a>
+      </div>
     </form>
 
   </div>

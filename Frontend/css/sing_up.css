@@ -20,10 +20,29 @@
     padding: 5vmin;
   }
   
+  select.carrera{
+    border-radius: 2px;
+    border: #676767;
+    height: 32px;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
   h2 {
     font-size: 1.75rem;
   }
   
+  a.return{
+    text-decoration: none;
+    color: #292929;
+  }
+  a:hover{
+    color: #28ad63;
+  }
+
   input {
     background-image: none;
     border: none;
@@ -42,6 +61,18 @@
    .align {
     display: grid;
     place-items: center;
+  }
+  /* ---------- BUTTON ---------- */
+  
+  .button {
+    background-color: #6ff37A;
+    color: #fff;
+    padding: 0.25em 1.5em;
+  }
+  
+  .button:focus,
+  .button:hover {
+    background-color: #28ad63;
   }
   
 .login {

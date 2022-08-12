@@ -1,8 +1,8 @@
 <?php
-    /*require '../Backend/scripts/crrera_mst.php';
+    require '../Backend/scripts/crrera_mst.php';
     $crrera_mst = new crrera_mst();
 
-    $route = '../';*/
+    $route = '../';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
 <body class="align">
 <div class="login">
     <?php 
-        /*$result_crrera = $crrera_mst->get_crrera($route);*/
+        $result_crrera = $crrera_mst->get_crrera($route);
     ?>
     <header class="login__header">
       <h2>Registro de usuario</h2>
@@ -45,17 +45,14 @@
                         <input type="text" id="enrollment" name="enrollment" placeholder="Matricula" minlength="7" maxlength="7" required>
                     </div>
                     <div>
-                    <select name="student_career" id="student_career" required >
+                    <select name="student_career" id="student_career" class="carrera" required >
                             <option value="" select hidden> Selecciona tu carrera</option>
-                            <option value="1">Tecnologias de la información</option>
-                            <option value="2">Gastronomia</option>
-                            <option value="3">Mecatronica</option>
                             <?php
-                               /* while($crrera = $result_crrera->fetch_assoc()){
+                               while($crrera = $result_crrera->fetch_assoc()){
                                     ?>
                                         <option value="<?php echo $crrera['crrera_id'];?>"><?php echo $crrera['crrera_dscrip'];?></option>
                                     <?php
-                                }*/
+                                }
                             ?>
                         </select>
                     </div>
@@ -66,10 +63,10 @@
                         <input type="password" id="password2" name="password2" placeholder="Ingresa nuevamente la contraseña" minlength="6" required>
                     </div>
                     <div>
-                        <button id="send" type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Registrarme </button>
+                        <input class="button" type="submit" value="Ingresar">
                     </div>
                     <div>   
-                        <a href="../index.php">Regresar a la pantalla de inicio</a></p>
+                        <a class="return" href="../index.php">Regresar a la pantalla de inicio</a></p>
                     </div>
                 </form>
                 <div id="warning">

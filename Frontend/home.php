@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -20,56 +23,36 @@
 <body>
     <div>
         <div>
-                <br>
-                <main>
-                    <div class="row">
-                        <div class="col">
-                            <h1>Pantallas de usuarios</h1>
-                        </div>
-                    </div>
-                </main>
-                <br><br>
-
             <div class="formulario_content">
                 <div class="formulario">
-                    <form action="" action="">
-                        <div>
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <main>
+                        <div class="login__header">
+                            <div>
+                                <h2>Pantallas de usuarios</h2>
                             </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <img src="Frontend\multimedia\carousel\2.jpg" class="d-block w-100" alt="..." height="400px">
-                                </div>
-                                <div class="carousel-item">
-                                <img src="Frontend\multimedia\carousel\2.jpg" class="d-block w-100" alt="..." height="400px">
-                                </div>
-                                <div class="carousel-item">
-                                <img src="Frontend\multimedia\carousel\2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-                            </div>
-                            <div class="text">
-                                <p>Bienvenido al sistema Gestor de Actividades Universitaraias, para poder comenzar selecciona el tipo de usuario </p><br>
-                            </div>
-                            <div class="buttons">
-                            <button  class="btn btn-success" style="margin-left: 12.5%; width:25% "><a href="Frontend/Sing_in_almn.php">Alumnos</a></button> 
-                            <button  class="btn btn-primary" style="margin-left: 22.5%; width:25% "><a href="Frontend/Sing_in_dcnt.php">Docentes</a></button><br><br>
-                            </div>
-                            <p>¿No tienes cuenta? <a href="Frontend/Sing_Up.php">Registrate aqui</a></p>
-                            
                         </div>
+                    </main><br>
+                    <form action="" action="">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="Frontend\multimedia\carousel\2.jpg" alt="Second slide" height="450px">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="Frontend\multimedia\carousel\Cultura.webp" alt="Second slide" height="450px">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="Frontend\multimedia\carousel\escuela.jpg" alt="First slide" height="450px">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="text">
+                        <p>Bienvenido al sistema Gestor de Actividades Universitaraias, para poder comenzar selecciona el tipo de usuario </p><br>
+                    </div>
+                    <div class="buttons">
+                        <a class="btn btn-success" style="margin-left: 12.5%; width:25% " href="Frontend/Sing_in_almn.php">Alumnos</a>
+                        <a class="btn btn-primary" style="margin-left: 22.5%; width:25% " href="Frontend/Sing_in_dcnt.php">Docentes</a><br><br>
+                    </div>
                     </form>
                 </div>
             </div>
