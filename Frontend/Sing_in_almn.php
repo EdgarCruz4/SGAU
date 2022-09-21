@@ -48,7 +48,7 @@
         <a class="return" href="../index.php">Regresar a la pantalla de inicio</a>
       </div>
       <div>
-        No tienes cuenta? <a class="return" href="Frontend/Sing_Up.php">Registrate aqui</a>
+        No tienes cuenta? <a class="return" href="Sing_Up.php" >Registrate aqui</a>
       </div>
     </form>
 

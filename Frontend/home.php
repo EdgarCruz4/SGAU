@@ -28,7 +28,7 @@
                     <main>
                         <div class="login__header">
                             <div>
-                                <h2>Pantallas de usuarios</h2>
+                                <h2>Pantalla de usuarios</h2>
                             </div>
                         </div>
                     </main><br>
